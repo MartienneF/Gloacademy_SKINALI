@@ -1,85 +1,98 @@
 .offer
   padding: 129px 0
   &-block
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1)
     padding: 80px
-    margin-top: -200px
-    box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1)
     &_calc-bg
-      background: #ffffff url('../img/offer/form-calc-bg.png') no-repeat center right
+      background: #fff url("../img/offer/form-bg-calc.png") no-repeat center right
       background-size: contain
+      margin-top: -180px
     &_price-bg
-      background: #ffffff url('../img/offer/form-price-bg.png') no-repeat center right
+      background: #fff url("../img/offer/form-bg-price.png") no-repeat center right
       background-size: contain
+      margin-top: -200px
   &__title
     font-size: 25px
-    text-transform: uppercase
     +bold
     margin-bottom: 20px
+    text-transform: uppercase
   &__subtitle
-    display: block
     font-size: 21px
+    display: block
     margin-bottom: 48px
-    max-width: 750px
+    max-width: 730px
 .form
   &__row
     display: flex
     align-items: center
     max-width: 900px
-    margin-bottom: 30px
+    margin-bottom: 25px
     &:last-child
       margin-bottom: 0
   &__label
-    display: block
     font-size: 17px
-    margin-bottom: 5px
+    display: block
+    margin-bottom: 15px
   &__group
     flex-basis: 33.33%
   &__input
     width: 100%
-    border-right-width: 0px
-    &:last-child
-      border-right-width: 1px
+    border: 1px solid #dddddd
   &__button
-    height: 80px
     width: 100%
+    height: 80px
   &__policy
-    display: inline-block
     margin-left: 45px
+    display: inline-block
     font-size: 17px
-@media (max-width: 1199px)
+
+@media screen and (max-width: 1199px)
   .offer
     &-block
       background-position: center right -120px
-@media (max-width: 991px)
+  .form
+    &__policy
+      margin-left: 25px
+@media screen and (max-width: 991px)
+  .offer
+    &-block
+      background-position: center right -185px
+  .form
+    &__policy
+      max-width: 300px
+@media screen and (max-width: 768px)
   .offer
     &-block
       background: none
-      background-color: #ffffff
+      background-color: #fff
       padding: 40px
-@media (max-width: 768px)
-  .offer
-    &__title
-      font-size: 18px
-    &__subtitle
-      font-size: 16px
   .form
     &__row
       flex-direction: column
       &-checkbox
         flex-direction: row
     &__group
-      flex-basis: 100%
       width: 100%
     &__input
       margin-bottom: 20px
+    &__select
+      margin-bottom: 20px
     &__policy
       margin-left: 0
-      margin-top: 30px
-@media (max-width: 480px)
+      text-align: center
+      margin-top: 25px
+      max-width: 100%
+@media screen and (max-width: 576px)
   .form
-    &__row
-      &-checkbox
-        flex-direction: column
-        align-items: flex-start
-    &__checkbox
+    &__row-checkbox
+      flex-direction: column
+      align-items: flex-start
+  .offer
+    &__title
+      font-size: 16px
+    &__subtitle
+      font-size: 16px
+  .checkbox
+    &-label
+      margin-right: 0px
       margin-bottom: 20px

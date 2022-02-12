@@ -9,6 +9,7 @@
     display: flex
     align-items: center
     justify-content: space-between
+    min-height: 80px
   &__mobile, &__landline
     text-align: right
   &__phone
@@ -19,7 +20,7 @@
     text-decoration: none
     color: $text-color
   &__small-text
-    display: block
+    // display: block
     font-size: 14px
     color: $text-color-light
     text-decoration: none
@@ -53,11 +54,16 @@
     align-items: center
     justify-content: center
     background-color: transparent
-    border: none
-    border-right: 1px solid rgba(#510bba, 0.1)
-    border-left: 1px solid rgba(#510bba, 0.1)
-    height: 80px
-    width: 70px
+    &:focus
+      outline: none
+    &:hover
+      cursor: pointer
+  		border: none
+  		border:
+      right: 1px solid rgba(#510bba, 0.1)
+      left: 1px solid rgba(#510bba, 0.1)
+  		height: 80px
+  		width: 80px
     &__line
       display: block
       width: 20px
@@ -73,22 +79,25 @@
     +bold
   &__description
     display: block
-    font-size: 14px
     color: $text-color-light
-    font-size: 14px
+    // font-size: 14px
 @media (max-width: 991px)
   .navbar
-    &__mobile, &__landline
+    &__mobile,
+    &__landline
       display: none
+  .menu
+    &__nav
+      flex-direction: column
+    &__link
+      margin-bottom: 20px
 @media (max-width: 576px)
   .logo
     display: none
   .menu
     top: 60px
-    // transform: translateY(0)
     &-button
       height: 60px
-    &-nav
-      flex-direction: column
-    &__link
-      margin-bottom: 20px
+  .navbar
+    &-wrap
+      min-height: 60px
